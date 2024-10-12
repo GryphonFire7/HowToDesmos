@@ -1,10 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-* {
-  transition: all 1s ease-in-out 0s;
-  font-family: "Arvo", serif;
-}
-
+/**********************************************************/
+/* Container Styling & Variables */
+/**********************************************************/
 :root {
   --background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Graph_paper_scan_1600x1000_%286509259561%29.jpg/640px-Graph_paper_scan_1600x1000_%286509259561%29.jpg");
   --nav-bg: white;
@@ -26,10 +24,11 @@ body {
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
+  font-family: "Arvo", serif;
 }
 
 .container {
-  display: grid;
+  display: block;
   grid-template-rows: 5em auto;
   grid-template-areas: "nav content";
   position: absolute;
@@ -42,6 +41,28 @@ body {
   margin: 0;
 }
 
+/**********************************************************/
+/* Element Styling */
+/**********************************************************/
+a {
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+a:hover, a:focus {
+  border-bottom: 5px solid var(--desmos-green);
+}
+
+/**********************************************************/
+/* Cosmetic Classes */
+/**********************************************************/
+.green {
+  color: var(--desmos-green);
+}
+
+/**********************************************************/
+/* Nav Styling */
+/**********************************************************/
 nav {
   display: flex;
   align-items: center;
@@ -53,30 +74,28 @@ nav {
   color: var(--txt);
 }
 
+.title {
+  font-size: 1.75em;
+  margin: 0 0 0 0.5em;
+}
+
 .search {
   font-size: 1.5em;
+  font-family: "Arvo", serif;
   height: 50%;
+  padding: 0.5em;
   flex-grow: 0.25;
   margin: 0 0 0 3em;
   text-indent: 0.5em;
   border: 0;
   border-bottom: 1px solid currentcolor;
+  transition: all 0.5s ease;
 }
 
 .search:focus {
   outline: 0;
   transform: scale(1.05);
   background: var(--search-bg-focus);
-}
-
-.title {
-  font-size: 1.75em;
-  margin: 0 0 0 0.5em;
-}
-
-.title a:hover, .title a:focus {
-  border-bottom: 5px solid currentcolor;
-  outline: 0;
 }
 
 .navButtons {
@@ -86,17 +105,13 @@ nav {
   list-style-type: none;
 }
 
-/*
-.navButtons:hover > *:not(:hover) {
-  filter: blur(3px);
-}
-*/
 .navButtons button {
   flex-grow: 0.25;
   background: transparent;
   font-size: 1.75em;
   border: 0 solid black;
-  transition-duration: 0.5s;
+  transition: all 0.5s ease;
+  font-family: 'Arvo', serif;
 }
 
 .navButtons button:hover, .navButtons button:focus {
@@ -105,6 +120,9 @@ nav {
   outline: 0;
 }
 
+/**********************************************************/
+/* Content Styling */
+/**********************************************************/
 .content {
   display: block;
   grid-area: content;
@@ -114,15 +132,7 @@ nav {
   padding: 2em;
 }
 
-.green {
-  color: var(--desmos-green);
-}
-
 .content h1 {
   text-decoration: none;
   font-size: 2.4em;
-}
-
-a {
-  text-decoration: none;
 }

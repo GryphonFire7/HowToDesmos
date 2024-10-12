@@ -4,8 +4,15 @@ const getElement = (id) => {
 }
 const range = (count) => {
   let ret = []
-  for (let i;i<count;i++) {
+  for (var i; i < count; i++) {
     ret.push(i)
   }
   return ret
 }
+
+body.style.display = 'none';
+document.addEventListener('DOMContentLoaded', () => {
+  window.setTimeout(() => {
+    body.style.display = 'block'
+  }, 500)
+})
