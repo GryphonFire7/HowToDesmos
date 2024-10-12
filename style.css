@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  transition: all 1s ease-in-out 0s;
+  font-family: "Arvo";
+}
+
+:root {
+  --background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Graph_paper_scan_1600x1000_%286509259561%29.jpg/640px-Graph_paper_scan_1600x1000_%286509259561%29.jpg");
+  --nav-bg: white;
+  --nav-shdw: #aaa;
+  --txt: black;
+  --desmos-green: #4A4;
+  --search-bg-focus: #eee;
+  --content-bg: white;
+}
+
+body {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  background: var(--background);
+  background-attachment: fixed;
+  backdrop-filter: brightness(0.8);
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 5em auto;
+  grid-template-areas: "nav" "content";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  gap: 0;
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  grid-area: "nav";
+  background: var(--nav-bg);
+  width: 100%;
+  justify-content: space-between;
+  box-shadow: 0 0 20px var(--nav-shdw);
+  color: var(--txt);
+}
+
+.search {
+  font-size: 1.5em;
+  height: 50%;
+  flex-grow: 0.25;
+  margin: 0;
+  margin-left: 3em;
+  text-indent: 0.5em;
+  border: 0;
+  border-bottom: 1px solid currentcolor;
+}
+
+.search:focus {
+  outline: 0;
+  transform: scale(1.05);
+  background: var(--search-bg-focus);
+}
+
+.title {
+  font-size: 1.75em;
+  margin: 0;
+  margin-left: 0.5em;
+}
+
+.title a:hover, .title a:focus {
+  border-bottom: 5px solid currentcolor;
+  outline: 0;
+}
+
+.navButtons {
+  display: flex;
+  flex-grow: 0.5;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+/*
+.navButtons:hover > *:not(:hover) {
+  filter: blur(3px);
+}
+*/
+.navButtons button {
+  font-size: 1em;
+  flex-grow: 0.25;
+  background: transparent;
+  font-size: 1.75em;
+  border: 0px solid black;
+  transition-duration: 0.5s;
+}
+
+.navButtons button:hover, .navButtons button:focus {
+  transform: translateY(-5px);
+  border-bottom: 5px solid currentcolor;
+  outline: 0;
+}
+
+.content {
+  display: block;
+  grid-area: "content";
+  width: 100%;
+  background: var(--content-bg);
+  margin-top: 150px;
+  padding: 2em;
+}
+
+.green {
+  color: var(--desmos-green);
+}
+
+.content h1 {
+  text-decoration: none;
+  font-size: 2.4em;
+}
+
+a {
+  text-decoration: none;
+}
