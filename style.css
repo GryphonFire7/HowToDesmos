@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 * {
   transition: all 1s ease-in-out 0s;
-  font-family: "Arvo";
+  font-family: "Arvo", serif;
 }
 
 :root {
@@ -30,7 +31,7 @@ body {
 .container {
   display: grid;
   grid-template-rows: 5em auto;
-  grid-template-areas: "nav" "content";
+  grid-template-areas: "nav content";
   position: absolute;
   left: 0;
   top: 0;
@@ -44,7 +45,7 @@ body {
 nav {
   display: flex;
   align-items: center;
-  grid-area: "nav";
+  grid-area: nav;
   background: var(--nav-bg);
   width: 100%;
   justify-content: space-between;
@@ -56,8 +57,7 @@ nav {
   font-size: 1.5em;
   height: 50%;
   flex-grow: 0.25;
-  margin: 0;
-  margin-left: 3em;
+  margin: 0 0 0 3em;
   text-indent: 0.5em;
   border: 0;
   border-bottom: 1px solid currentcolor;
@@ -71,8 +71,7 @@ nav {
 
 .title {
   font-size: 1.75em;
-  margin: 0;
-  margin-left: 0.5em;
+  margin: 0 0 0 0.5em;
 }
 
 .title a:hover, .title a:focus {
@@ -93,11 +92,10 @@ nav {
 }
 */
 .navButtons button {
-  font-size: 1em;
   flex-grow: 0.25;
   background: transparent;
   font-size: 1.75em;
-  border: 0px solid black;
+  border: 0 solid black;
   transition-duration: 0.5s;
 }
 
@@ -109,7 +107,7 @@ nav {
 
 .content {
   display: block;
-  grid-area: "content";
+  grid-area: content;
   width: 100%;
   background: var(--content-bg);
   margin-top: 150px;
