@@ -12,7 +12,8 @@
   --dark-green: #208020;
   --search-bg-focus: #eee;
   --content-bg: white;
-  --font: "Arvo", serif;
+  --font: "Arvo";
+  --font-fb: monospace;
 }
 
 body {
@@ -26,7 +27,7 @@ body {
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
-  font-family: var(--font);
+  font-family: var(--font), var(--font-fb);
 }
 
 .container {
@@ -83,7 +84,7 @@ nav {
 
 .search {
   font-size: 1.5em;
-  font-family: var(--font);
+  font-family: var(--font), var(--font-fb);
   height: 50%;
   padding: 0.5em;
   flex-grow: 0.25;
@@ -113,7 +114,7 @@ nav {
   font-size: 1.75em;
   border: 0 solid black;
   transition: all 0.5s ease;
-  font-family: var(--font);
+  font-family: var(--font), var(--font-fb);
   margin: 0;
 }
 
@@ -134,7 +135,7 @@ nav {
   background: var(--content-bg);
   margin-top: 150px;
   padding: 2em;
-  font-family: var(--font);
+  font-family: var(--font), var(--font-fb);
 }
 
 .content h1 {
@@ -144,6 +145,6 @@ nav {
 
 .content h2 {
   font-size: 1.5em;
-  font-family: var(--font);
+  font-family: var(--font), var(--font-fb);
   color: var(--dark-green);
 }
