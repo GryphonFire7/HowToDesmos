@@ -4,7 +4,8 @@ const getElement = (id) => {
 }
 const range = (count) => {
   let ret = []
-  for (var i; i < count; i++) {
+  let i;
+  for (i; i < count; i++) {
     ret.push(i)
   }
   return ret
