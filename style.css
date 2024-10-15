@@ -49,12 +49,7 @@ body {
 /**********************************************************/
 a {
   text-decoration: none;
-  color: var(--desmos-green);
-  transition: all 0.5s ease;
-}
-
-a:hover, a:focus {
-  border-bottom: 5px solid var(--desmos-green);
+  color: inherit;
 }
 
 /**********************************************************/
@@ -113,6 +108,7 @@ nav {
   flex-grow: 0.25;
   background: transparent;
   font-size: 1.75em;
+  color: black;
   border: 0 solid black;
   transition: all 0.5s ease;
   font-family: var(--font), var(--font-fb);
