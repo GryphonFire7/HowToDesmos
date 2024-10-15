@@ -10,10 +10,3 @@ const range = (count) => {
   }
   return ret
 }
-
-body.style.display = 'none';
-document.addEventListener('DOMContentLoaded', () => {
-  window.setTimeout(() => {
-    body.style.display = 'block'
-  }, 500)
-})

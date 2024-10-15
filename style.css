@@ -49,6 +49,7 @@ body {
 /**********************************************************/
 a {
   text-decoration: none;
+  color: var(--desmos-green);
   transition: all 0.5s ease;
 }
 
